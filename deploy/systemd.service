@@ -5,8 +5,8 @@ After=network.target
 [Service]
 User=brig
 Group=brig
-WorkingDirectory=/home/brig/code/no-end-insight
-ExecStart=/home/brig/code/no-end-insight/.venv/bin/python3 -m gunicorn -w 1 --bind 0.0.0.0:3005 wsgi:app
+WorkingDirectory=/home/brig/dev/no-end-insight
+ExecStart=/home/brig/dev/no-end-insight/.venv/bin/python3 -m gunicorn -w 1 --bind 0.0.0.0:3005 wsgi:app
 Restart=always
 RestartSec=5
 

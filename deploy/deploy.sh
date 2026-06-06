@@ -5,14 +5,14 @@ echo "Deploying insight"
 
 # nginx
 
-sudo cp /home/brig/code/no-end-insight/deploy/nginx.conf /etc/nginx/conf.d/insight.conf
+sudo cp /home/brig/dev/no-end-insight/deploy/nginx.conf /etc/nginx/conf.d/insight.conf
 
 sudo nginx -t
 sudo systemctl reload nginx
 
 # systemd
 
-sudo cp /home/brig/code/no-end-insight/deploy/systemd.service /etc/systemd/system/insight.service
+sudo cp /home/brig/dev/no-end-insight/deploy/systemd.service /etc/systemd/system/insight.service
 
 sudo systemctl daemon-reload
 sudo systemctl enable insight.service
